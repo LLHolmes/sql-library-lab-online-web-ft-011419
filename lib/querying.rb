@@ -33,7 +33,8 @@ end
 def select_series_title_with_most_human_characters
   "SELECT characters.series_id, COUNT(characters.species) FROM characters
   WHERE characters.species = 'human'
-  GROUP BY characters.series_id;"
+  GROUP BY characters.series_id
+  ORDER BY COUNT(*) DESC LIMIT 1;"
   # "SELECT series.title
   # FROM
   # (SELECT characters.series_id, COUNT(characters.species) FROM characters
