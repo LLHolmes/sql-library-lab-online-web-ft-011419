@@ -6,3 +6,4 @@ CREATE TABLE characters (
   author_id INTEGER,
   series_id INTEGER
 );
+UPDATE characters SET species = "Martian" WHERE id = 8;
